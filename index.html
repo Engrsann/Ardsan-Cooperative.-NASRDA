@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ardsan Cooperative NASRDA</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#006400">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top"><img src="icons/icon-192x192.png" alt="logo" class="logo"><h1>Ardsan Cooperative NASRDA</h1></header>
+<main class="wrap">
+  <section id="auth">
+    <div id="login-box">
+      <h2>Member Login</h2>
+      <input id="uid" placeholder="Unique ID (e.g., 0001)">
+      <input id="password" placeholder="Password" type="password">
+      <button id="loginBtn">Login</button>
+      <p>Don't have an account? <a id="toSignup" href="#">Sign up</a></p>
+      <p id="loginMsg" class="muted"></p>
+    </div>
+    <div id="signup-box" class="hidden">
+      <h2>Member Sign Up</h2>
+      <input id="name" placeholder="Full name">
+      <input id="fileNo" placeholder="File number">
+      <input id="ippis" placeholder="IPPIS number">
+      <input id="dept" placeholder="Department">
+      <input id="phone" placeholder="Phone">
+      <input id="email" placeholder="Email">
+      <button id="registerBtn">Register</button>
+      <p><a id="toLogin" href="#">Back to login</a></p>
+      <p id="regMsg" class="muted"></p>
+    </div>
+  </section>
+  <section id="dashboard" class="hidden">
+    <h2>Welcome, <span id="memberName"></span></h2>
+    <div class="cards">
+      <div class="card"><strong>Savings</strong><div id="savings">₦0.00</div></div>
+      <div class="card"><strong>Loan</strong><div id="loan">₦0.00</div></div>
+      <div class="card"><strong>Deduction</strong><div id="deduct">₦0.00</div></div>
+    </div>
+    <div class="actions">
+      <button id="viewItemsBtn">View Commodities</button>
+      <button id="applyLoanBtn">Apply for Loan</button>
+      <button id="logoutBtn">Logout</button>
+    </div>
+    <div id="contentArea"></div>
+  </section>
+</main>
+<script src="app.js"></script>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('./service-worker.js').catch(()=>{});}</script>
+</body>
+</html>
