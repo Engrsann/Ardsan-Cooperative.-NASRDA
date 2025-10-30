@@ -1,5 +1,5 @@
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
+  apiKey: "AIzaSyDTohhMUjXKOMxNHDXBN4c0vx9wp5rMMgs",
   authDomain: "YOUR_AUTH_DOMAIN",
   databaseURL: "https://console.firebase.google.com/project/ardsan-cooperative/database/ardsan-cooperative-default-rtdb/data/~2F",
   projectId: "YOUR_PROJECT_ID",
